@@ -1,6 +1,6 @@
 import React from "react";
 import logoWhiteSm from "../../assets/logo-white-sm.png";
-import logoWhite from "../../assets/logo-white.svg";
+import logoWhite from "../../assets/logo-white.png";
 
 interface LogoProps {
   className?: string;
