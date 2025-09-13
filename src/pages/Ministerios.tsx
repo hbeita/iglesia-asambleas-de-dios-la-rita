@@ -1,6 +1,5 @@
 import {
   BookOpen,
-  Calendar,
   Clock,
   Filter,
   Heart,
@@ -168,18 +167,22 @@ const Ministerios: React.FC = () => {
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-3 mb-6">
-                    <div className="flex items-center text-sm text-gray-600">
-                      <Clock className="h-4 w-4 mr-2 flex-shrink-0" />
-                      <span>{ministerio.schedule}</span>
-                    </div>
+                    {ministerio.schedule && (
+                      <div className="flex items-center text-sm text-gray-600">
+                        <Clock className="h-4 w-4 mr-2 flex-shrink-0" />
+                        <span>{ministerio.schedule}</span>
+                      </div>
+                    )}
                     <div className="flex items-center text-sm text-gray-600">
                       <MapPin className="h-4 w-4 mr-2 flex-shrink-0" />
                       <span>{ministerio.location}</span>
                     </div>
-                    <div className="flex items-center text-sm text-gray-600">
-                      <User className="h-4 w-4 mr-2 flex-shrink-0" />
-                      <span>Líder: {ministerio.leader.name}</span>
-                    </div>
+                    {ministerio.leader && (
+                      <div className="flex items-center text-sm text-gray-600">
+                        <User className="h-4 w-4 mr-2 flex-shrink-0" />
+                        <span>Líder: {ministerio.leader.name}</span>
+                      </div>
+                    )}
                   </div>
 
                   <Button className="w-full group-hover:bg-primary-700 transition-colors">
@@ -255,15 +258,17 @@ const Ministerios: React.FC = () => {
                       Información
                     </h3>
                     <div className="space-y-3">
-                      <div className="flex items-center text-gray-600">
-                        <Clock className="h-5 w-5 mr-3 text-primary-600" />
-                        <div>
-                          <div className="font-medium">Horario</div>
-                          <div className="text-sm">
-                            {selectedMinisterio.schedule}
+                      {selectedMinisterio.schedule && (
+                        <div className="flex items-center text-gray-600">
+                          <Clock className="h-5 w-5 mr-3 text-primary-600" />
+                          <div>
+                            <div className="font-medium">Horario</div>
+                            <div className="text-sm">
+                              {selectedMinisterio.schedule}
+                            </div>
                           </div>
                         </div>
-                      </div>
+                      )}
                       <div className="flex items-center text-gray-600">
                         <MapPin className="h-5 w-5 mr-3 text-primary-600" />
                         <div>
@@ -276,28 +281,30 @@ const Ministerios: React.FC = () => {
                     </div>
                   </div>
 
-                  <div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                      Líder del Ministerio
-                    </h3>
-                    <div className="bg-gray-50 p-4 rounded-lg">
-                      <div className="font-medium text-gray-900">
-                        {selectedMinisterio.leader.name}
+                  {selectedMinisterio.leader && (
+                    <div>
+                      <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                        Líder del Ministerio
+                      </h3>
+                      <div className="bg-gray-50 p-4 rounded-lg">
+                        <div className="font-medium text-gray-900">
+                          {selectedMinisterio.leader.name}
+                        </div>
+                        {selectedMinisterio.leader.phone && (
+                          <div className="flex items-center text-sm text-gray-600 mt-1">
+                            <Phone className="h-4 w-4 mr-2" />
+                            {selectedMinisterio.leader.phone}
+                          </div>
+                        )}
+                        {selectedMinisterio.leader.email && (
+                          <div className="flex items-center text-sm text-gray-600 mt-1">
+                            <Mail className="h-4 w-4 mr-2" />
+                            {selectedMinisterio.leader.email}
+                          </div>
+                        )}
                       </div>
-                      {selectedMinisterio.leader.phone && (
-                        <div className="flex items-center text-sm text-gray-600 mt-1">
-                          <Phone className="h-4 w-4 mr-2" />
-                          {selectedMinisterio.leader.phone}
-                        </div>
-                      )}
-                      {selectedMinisterio.leader.email && (
-                        <div className="flex items-center text-sm text-gray-600 mt-1">
-                          <Mail className="h-4 w-4 mr-2" />
-                          {selectedMinisterio.leader.email}
-                        </div>
-                      )}
                     </div>
-                  </div>
+                  )}
                 </div>
 
                 {selectedMinisterio.activities &&
@@ -346,14 +353,16 @@ const Ministerios: React.FC = () => {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-3 mt-8 pt-6 border-t border-gray-200">
-                <Button className="flex-1">
+                {/* <Button className="flex-1">
                   <Calendar className="mr-2 h-4 w-4" />
                   Unirse al Ministerio
-                </Button>
-                <Button variant="outline" className="flex-1">
-                  <Phone className="mr-2 h-4 w-4" />
-                  Contactar Líder
-                </Button>
+                </Button>*/}
+                {selectedMinisterio.leader && (
+                  <Button variant="outline" className="flex-1">
+                    <Phone className="mr-2 h-4 w-4" />
+                    Contactar Líder
+                  </Button>
+                )}
               </div>
             </div>
           </div>

@@ -92,8 +92,8 @@ const Donar: React.FC = () => {
 
   const bankInfo = {
     bank: "BAC San José",
-    accountName: CHURCH_INFO.name,
-    accountNumber: "001002015652",
+    accountName: "HILARY MARIANA ORTEGA LOPEZ",
+    accountNumber: "CR93010200009414161091",
     accountType: "Cuenta Corriente",
     sinpeNumber: CHURCH_INFO.phone,
     sinpeName: CHURCH_INFO.name,
@@ -303,7 +303,10 @@ const Donar: React.FC = () => {
                     <ol className="text-sm text-blue-800 space-y-1">
                       <li>1. Realiza la transferencia desde tu banco</li>
                       <li>2. Usa el número de cuenta exacto</li>
-                      <li>3. Envía el comprobante a {CHURCH_INFO.email}</li>
+                      <li>
+                        3. Envía el comprobante al whatsapp{" "}
+                        {CHURCH_INFO.socialMedia.whatsapp}
+                      </li>
                       <li>4. Recibirás confirmación en 24 horas</li>
                     </ol>
                   </div>
@@ -411,9 +414,8 @@ const Donar: React.FC = () => {
                       Horarios de Servicio:
                     </h4>
                     <ul className="text-sm text-yellow-800 space-y-1">
-                      <li>• Domingo: 9:00 AM, 10:30 AM, 7:00 PM</li>
-                      <li>• Miércoles: 7:00 PM</li>
-                      <li>• Viernes: 7:30 PM</li>
+                      <li>• Sábado: 7:00 PM - Culto Principal</li>
+                      <li>• Martes: 9:00 AM - Ayuno y Oración</li>
                     </ul>
                   </div>
 

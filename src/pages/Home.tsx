@@ -280,18 +280,22 @@ const Home: React.FC = () => {
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-2 mb-4">
-                    <div className="flex items-center text-sm text-gray-600">
-                      <Clock className="h-4 w-4 mr-2" />
-                      {ministry.schedule}
-                    </div>
+                    {ministry.schedule && (
+                      <div className="flex items-center text-sm text-gray-600">
+                        <Clock className="h-4 w-4 mr-2" />
+                        {ministry.schedule}
+                      </div>
+                    )}
                     <div className="flex items-center text-sm text-gray-600">
                       <MapPin className="h-4 w-4 mr-2" />
                       {ministry.location}
                     </div>
-                    <div className="text-sm text-gray-600">
-                      <span className="font-medium">Líder:</span>{" "}
-                      {ministry.leader.name}
-                    </div>
+                    {ministry.leader && (
+                      <div className="text-sm text-gray-600">
+                        <span className="font-medium">Líder:</span>{" "}
+                        {ministry.leader.name}
+                      </div>
+                    )}
                   </div>
                   <Button className="w-full" asChild>
                     <Link to={`/ministerios#${ministry.id}`}>Conocer Más</Link>

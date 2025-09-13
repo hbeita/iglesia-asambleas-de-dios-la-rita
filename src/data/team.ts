@@ -31,14 +31,39 @@ export const pastoralTeam: TeamMember[] = [
       facebook: CHURCH_INFO.socialMedia.facebook,
       instagram: CHURCH_INFO.socialMedia.instagram,
     },
-    education: ["Licenciatura en Teología - Seminario Bíblico de Costa Rica"],
-    experience: ["Pastores - Iglesia Asambleas de Dios La Rita (presente)"],
+    education: [
+      "Pastor Jhon: Bachiller en Teología, cursando Licenciatura",
+      "Pastora Hillary: Bachiller en Teología, cursando Licenciatura",
+      "Pastora Hillary: Culminó su carrera en Audiología",
+      "Pastor Jhon: Estudiante de Psicología",
+    ],
+    experience: [
+      "Pastor Jhon: 12 años como Pastor asociado",
+      "Pastora Hillary: 10 años como Pastora asociada",
+      "Ambos: Pastores con credencial de licenciado",
+      "Ambos: Colegiados Alianza evangélica",
+      "Ambos: Carnet de profesor acreditado del IBAD",
+      "Pastor Jhon: Presbítero",
+      "Pastor Jhon: Trabaja a nivel Nacional en discipulado",
+      "Pastora Hillary: Coordinadora de femmad",
+      "Pastora Hillary: Trabaja a nivel Nacional con mujeres",
+    ],
     specialties: [
       "Predicación y Enseñanza",
       "Liderazgo Pastoral",
       "Consejería Familiar",
       "Desarrollo de Ministerios",
       "Evangelismo",
+      "Discipulado Nacional",
+      "Ministerio con Mujeres",
+      "Música (Pastor Jhon)",
+      "Audiología (Pastora Hillary)",
+      "Visitamos cárceles",
+      "Orfanatos",
+      "Convivios",
+      "Centros de rehabilitación",
+      "Crecimiento en actividades zonales, en nacionales",
+      "Fraternidad con otras Iglesias",
     ],
   },
 ];
@@ -88,39 +113,29 @@ export const churchHistory = {
 
 export const missionVisionValues = {
   mission:
-    "Proclamar el evangelio de Jesucristo, discipular a los creyentes y servir a nuestra comunidad con amor y compasión, transformando vidas y construyendo una comunidad fuerte en la fe.",
+    "Ser una organización dedicada a formar discípulos de Cristo en la Rita y el mundo.\nMateo 28:18",
   vision:
-    "Ser una iglesia vibrante y creciente que impacte positivamente nuestra comunidad, donde cada persona encuentre su propósito en Cristo y desarrolle su potencial espiritual al máximo.",
+    "Ser la organización que trabaja para que en la Rita y todo el mundo todos sean salvos.\n1 Timoteo 3-4",
   values: [
     {
       title: "Amor",
       description:
-        "Amamos a Dios sobre todas las cosas y a nuestro prójimo como a nosotros mismos.",
+        "Es el valor central del cristianismo. Jesús dijo: 'En esto conocerán todos que sois mis discípulos: si tenéis amor los unos por los otros' (Juan 13:35). Se traduce en compasión, empatía, servicio y cuidado mutuo.",
     },
     {
       title: "Fe",
       description:
-        "Vivimos por fe, confiando en las promesas de Dios y su fidelidad.",
+        "Confianza plena en Dios, en su Palabra y en sus promesas. La fe es el motor de la vida cristiana y la base de toda esperanza.",
     },
     {
-      title: "Integridad",
+      title: "Humildad",
       description:
-        "Mantenemos altos estándares éticos y morales en todo lo que hacemos.",
+        "Reconocimiento de la necesidad de Dios, y servicio desinteresado a los demás. Imitar a Cristo, quien se despojó de su gloria para servir.",
     },
     {
-      title: "Servicio",
+      title: "Unidad",
       description:
-        "Servimos a otros con humildad y compasión, siguiendo el ejemplo de Cristo.",
-    },
-    {
-      title: "Excelencia",
-      description:
-        "Buscamos la excelencia en todo lo que hacemos para la gloria de Dios.",
-    },
-    {
-      title: "Comunidad",
-      description:
-        "Valoramos las relaciones auténticas y el compañerismo cristiano.",
+        "Jesús oró para que 'todos sean uno' (Juan 17:21). Valoramos las relaciones auténticas y el compañerismo cristiano.",
     },
   ],
 };

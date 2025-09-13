@@ -10,9 +10,9 @@ export interface Ministerio {
     | "música"
     | "evangelismo"
     | "servicio";
-  schedule: string;
+  schedule?: string;
   location: string;
-  leader: {
+  leader?: {
     name: string;
     phone?: string;
     email?: string;
@@ -32,16 +32,10 @@ export const ministerios: Ministerio[] = [
     shortDescription:
       "Enseñamos a los niños sobre el amor de Dios a través de actividades divertidas y educativas.",
     category: "niños",
-    schedule: "Domingos 9:00 AM - 10:30 AM",
-    location: "Salón de Niños",
-    leader: {
-      name: "María González",
-      phone: "+506 8888-1111",
-      email: "maria@asambleasdelarita.cr",
-    },
+    location: "Templo",
     image: "/images/ministerio-infantil.jpg",
     ageRange: "3-12 años",
-    requirements: ["Autorización de padres", "Formulario de inscripción"],
+    requirements: ["Autorización de padres"],
     activities: [
       "Historias bíblicas",
       "Manualidades",
@@ -57,13 +51,7 @@ export const ministerios: Ministerio[] = [
     shortDescription:
       "Un espacio dinámico para que los jóvenes crezcan en su fe y desarrollen amistades cristianas.",
     category: "jóvenes",
-    schedule: "Viernes 7:30 PM - 9:00 PM",
-    location: "Salón de Jóvenes",
-    leader: {
-      name: "Carlos Rodríguez",
-      phone: "+506 8888-2222",
-      email: "carlos@asambleasdelarita.cr",
-    },
+    location: "Templo",
     image: "/images/ministerio-jovenes.jpg",
     ageRange: "13-25 años",
     requirements: [
@@ -85,13 +73,7 @@ export const ministerios: Ministerio[] = [
     shortDescription:
       "Lideramos los tiempos de alabanza y adoración en nuestros servicios.",
     category: "música",
-    schedule: "Ensayo: Sábados 4:00 PM - 6:00 PM",
-    location: "Templo Principal",
-    leader: {
-      name: "Ana Martínez",
-      phone: "+506 8888-3333",
-      email: "ana@asambleasdelarita.cr",
-    },
+    location: "Templo",
     image: "/images/ministerio-adoracion.jpg",
     ageRange: "16+ años",
     requirements: [
@@ -114,13 +96,7 @@ export const ministerios: Ministerio[] = [
     shortDescription:
       "Reunimos a las mujeres para crecer en la fe, apoyarse mutuamente y servir a la comunidad.",
     category: "adultos",
-    schedule: "Sábados 10:00 AM - 12:00 PM",
-    location: "Salón de Damas",
-    leader: {
-      name: "Rosa Fernández",
-      phone: "+506 8888-4444",
-      email: "rosa@asambleasdelarita.cr",
-    },
+    location: "Templo",
     image: "/images/ministerio-damas.jpg",
     ageRange: "18+ años",
     requirements: ["Membresía en la iglesia", "Disponibilidad para servir"],
@@ -139,13 +115,7 @@ export const ministerios: Ministerio[] = [
     shortDescription:
       "Fortalecimiento de la fe masculina y desarrollo de liderazgo cristiano.",
     category: "adultos",
-    schedule: "Sábados 2:00 PM - 4:00 PM",
-    location: "Salón de Varones",
-    leader: {
-      name: "José Morales",
-      phone: "+506 8888-5555",
-      email: "jose@asambleasdelarita.cr",
-    },
+    location: "Templo",
     image: "/images/ministerio-varones.jpg",
     ageRange: "18+ años",
     requirements: ["Membresía en la iglesia", "Disponibilidad para proyectos"],
@@ -164,13 +134,7 @@ export const ministerios: Ministerio[] = [
     shortDescription:
       "Llevamos el mensaje del evangelio a nuestra comunidad y más allá.",
     category: "evangelismo",
-    schedule: "Domingos 3:00 PM - 5:00 PM",
-    location: "Comunidad",
-    leader: {
-      name: "Pedro Jiménez",
-      phone: "+506 8888-6666",
-      email: "pedro@asambleasdelarita.cr",
-    },
+    location: "Templo",
     image: "/images/ministerio-evangelismo.jpg",
     ageRange: "16+ años",
     requirements: ["Entrenamiento en evangelismo", "Compromiso de alcance"],

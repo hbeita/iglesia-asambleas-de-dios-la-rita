@@ -189,18 +189,12 @@ const SobreNosotros: React.FC = () => {
                 <CardTitle className="text-2xl">Nuestros Valores</CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="space-y-2">
-                  {missionVisionValues.values
-                    .slice(0, 3)
-                    .map((value, index) => (
-                      <div key={index} className="text-sm text-gray-600">
-                        <span className="font-medium text-gray-900">
-                          {value.title}:
-                        </span>{" "}
-                        {value.description}
-                      </div>
-                    ))}
-                </div>
+                <p className="text-gray-600 leading-relaxed">
+                  Nuestros valores fundamentales se basan en el amor como centro
+                  del cristianismo, la fe como motor de la vida cristiana, la
+                  humildad en el servicio desinteresado, y la unidad como
+                  reflejo del corazón de Cristo.
+                </p>
               </CardContent>
             </Card>
           </div>
