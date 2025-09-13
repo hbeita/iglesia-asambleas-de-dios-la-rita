@@ -77,8 +77,8 @@ const Ministerios: React.FC = () => {
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary-600 via-primary-700 to-primary-800 text-white">
+      {/* Hero Section - Hidden */}
+      {/* <section className="bg-gradient-to-br from-primary-600 via-primary-700 to-primary-800 text-white">
         <div className="container-custom section-padding">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
@@ -91,7 +91,7 @@ const Ministerios: React.FC = () => {
             </p>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Filter Section */}
       <section className="section-padding bg-gray-50">

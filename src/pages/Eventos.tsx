@@ -64,7 +64,9 @@ const Eventos: React.FC = () => {
   };
 
   const formatDate = (dateString: string) => {
-    const date = new Date(dateString);
+    // Parse the date string and create a date object in local timezone
+    const [year, month, day] = dateString.split("-").map(Number);
+    const date = new Date(year, month - 1, day); // month is 0-indexed
     return date.toLocaleDateString("es-CR", {
       weekday: "long",
       year: "numeric",
@@ -78,8 +80,14 @@ const Eventos: React.FC = () => {
   };
 
   const getDaysUntilEvent = (dateString: string) => {
-    const eventDate = new Date(dateString);
+    // Parse the date string and create a date object in local timezone
+    const [year, month, day] = dateString.split("-").map(Number);
+    const eventDate = new Date(year, month - 1, day);
+
+    // Get today's date in local timezone
     const today = new Date();
+    today.setHours(0, 0, 0, 0); // Reset time to start of day
+
     const diffTime = eventDate.getTime() - today.getTime();
     const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
     return diffDays;
@@ -108,8 +116,8 @@ const Eventos: React.FC = () => {
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary-600 via-primary-700 to-primary-800 text-white">
+      {/* Hero Section - Hidden */}
+      {/* <section className="bg-gradient-to-br from-primary-600 via-primary-700 to-primary-800 text-white">
         <div className="container-custom section-padding">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
@@ -122,7 +130,7 @@ const Eventos: React.FC = () => {
             </p>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Filter Section */}
       <section className="section-padding bg-gray-50">
@@ -180,8 +188,14 @@ const Eventos: React.FC = () => {
                   }`}
                   onClick={() => setSelectedEvent(event)}
                 >
-                  <CardHeader>
-                    <div className="flex items-center justify-between mb-4">
+                  {/* Event Image */}
+                  <div className="relative h-48 overflow-hidden">
+                    <img
+                      src={event.image}
+                      alt={event.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div className="absolute top-4 left-4">
                       <div
                         className={`flex items-center space-x-2 px-3 py-1 rounded-full text-sm font-medium ${getCategoryColor(
                           event.category
@@ -190,11 +204,15 @@ const Eventos: React.FC = () => {
                         <span>{getCategoryIcon(event.category)}</span>
                         <span className="capitalize">{event.category}</span>
                       </div>
-                      {event.featured && (
-                        <Star className="h-5 w-5 text-yellow-500 fill-current" />
-                      )}
                     </div>
+                    {event.featured && (
+                      <div className="absolute top-4 right-4">
+                        <Star className="h-5 w-5 text-yellow-500 fill-current" />
+                      </div>
+                    )}
+                  </div>
 
+                  <CardHeader>
                     <CardTitle className="text-xl group-hover:text-primary-600 transition-colors">
                       {event.title}
                     </CardTitle>

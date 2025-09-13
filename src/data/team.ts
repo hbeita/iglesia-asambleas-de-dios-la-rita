@@ -1,3 +1,5 @@
+import { CHURCH_INFO } from "../utils/constants";
+
 export interface TeamMember {
   id: string;
   name: string;
@@ -18,48 +20,24 @@ export interface TeamMember {
 
 export const pastoralTeam: TeamMember[] = [
   {
-    id: "pastor-principal",
-    name: "Pastor Jhon Antony Badilla",
-    position: "Pastor Principal",
-    bio: "El Pastor Jhon Antony Badilla lidera nuestra congregación con pasión y dedicación. Su compromiso es guiar a la iglesia hacia un crecimiento espiritual sólido y una comunidad unida en la fe.",
-    image: "/images/pastor-principal.jpg",
-    email: "pastor@asambleasdelarita.cr",
-    phone: "+506 2222-3333",
+    id: "pastoral-couple",
+    name: "Jhon Anthony Badilla & Hillary Ortega",
+    position: "Nuestros Pastores",
+    bio: "Somos una pareja joven apasionada por Jesús y con un gran amor por las almas. Dios nos ha confiado la hermosa misión de servir y pastorear esta iglesia, guiados siempre por una visión de reino.\n\nNuestro deseo es que en este lugar encuentres fe, esperanza y una familia espiritual que te acerque cada día más a Cristo. ¡Nos alegra mucho recibirte y caminar juntos en este propósito!",
+    image: "/src/assets/pastors.png",
+    email: CHURCH_INFO.email,
+    phone: CHURCH_INFO.phone,
     socialMedia: {
-      facebook: "https://facebook.com/pastorjhonantony",
-      instagram: "https://instagram.com/pastorjhonantony",
+      facebook: CHURCH_INFO.socialMedia.facebook,
+      instagram: CHURCH_INFO.socialMedia.instagram,
     },
     education: ["Licenciatura en Teología - Seminario Bíblico de Costa Rica"],
-    experience: [
-      "Pastor Principal - Iglesia Asambleas de Dios La Rita (presente)",
-    ],
+    experience: ["Pastores - Iglesia Asambleas de Dios La Rita (presente)"],
     specialties: [
-      "Predicación",
-      "Liderazgo",
-      "Consejería Pastoral",
-      "Desarrollo de Ministerios",
-    ],
-  },
-  {
-    id: "pastora-asociada",
-    name: "Hilary Ortega",
-    position: "Pastora",
-    bio: "Hilary Ortega se une a nuestro equipo pastoral trayendo consigo una pasión especial por el ministerio y el servicio a la comunidad. Su corazón está en ver a las familias fortalecidas en la fe y en construir una comunidad unida.",
-    image: "/images/pastora-asociada.jpg",
-    email: "hilary@asambleasdelarita.cr",
-    phone: "+506 2222-4444",
-    socialMedia: {
-      facebook: "https://facebook.com/hilaryortega",
-      instagram: "https://instagram.com/hilaryortega",
-    },
-    education: ["Licenciatura en Teología - Seminario Bíblico de Costa Rica"],
-    experience: [
-      "Pastora Asociada - Iglesia Asambleas de Dios La Rita (presente)",
-    ],
-    specialties: [
-      "Ministerio de Mujeres",
+      "Predicación y Enseñanza",
+      "Liderazgo Pastoral",
       "Consejería Familiar",
-      "Desarrollo de Líderes",
+      "Desarrollo de Ministerios",
       "Evangelismo",
     ],
   },

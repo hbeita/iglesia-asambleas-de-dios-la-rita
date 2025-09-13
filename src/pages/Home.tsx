@@ -1,12 +1,4 @@
-import {
-  ArrowRight,
-  Calendar,
-  Clock,
-  Heart,
-  MapPin,
-  Quote,
-  Star,
-} from "lucide-react";
+import { ArrowRight, Calendar, Clock, MapPin, Quote, Star } from "lucide-react";
 import React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "../components/ui/button";
@@ -17,11 +9,20 @@ import {
   CardHeader,
   CardTitle,
 } from "../components/ui/card";
+import Carousel from "../components/ui/carousel";
+import { allCarouselSlides } from "../data/carousel-simple";
 import { eventos } from "../data/eventos";
 import { ministerios } from "../data/ministerios";
-import { CHURCH_INFO, SERVICE_SCHEDULE } from "../utils/constants";
+import { SERVICE_SCHEDULE } from "../utils/constants";
 
 const Home: React.FC = () => {
+  // Utility function to format dates correctly (avoiding timezone issues)
+  const formatDateShort = (dateString: string) => {
+    const [year, month, day] = dateString.split("-").map(Number);
+    const date = new Date(year, month - 1, day);
+    return date.toLocaleDateString("es-CR");
+  };
+
   // Get featured events (next 3 events)
   const featuredEvents = eventos
     .filter((event) => new Date(event.date) >= new Date())
@@ -60,8 +61,8 @@ const Home: React.FC = () => {
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-primary-600 via-primary-700 to-primary-800 text-white">
+      {/* Hero Section - Hidden */}
+      {/* <section className="relative bg-gradient-to-br from-primary-600 via-primary-700 to-primary-800 text-white">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative container-custom section-padding">
           <div className="max-w-4xl mx-auto text-center">
@@ -91,6 +92,20 @@ const Home: React.FC = () => {
               </Button>
             </div>
           </div>
+        </div>
+      </section> */}
+
+      {/* Carousel Section */}
+      <section className="section-padding">
+        <div className="container-custom">
+          <Carousel
+            slides={allCarouselSlides}
+            autoPlay={true}
+            autoPlayInterval={6000}
+            showDots={true}
+            showArrows={true}
+            className="shadow-2xl"
+          />
         </div>
       </section>
 
@@ -175,17 +190,28 @@ const Home: React.FC = () => {
             {featuredEvents.map((event) => (
               <Card
                 key={event.id}
-                className="hover:shadow-lg transition-shadow"
+                className="hover:shadow-lg transition-shadow overflow-hidden"
               >
-                <CardHeader>
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-sm font-medium text-primary-600 bg-primary-100 px-3 py-1 rounded-full">
+                {/* Event Image */}
+                <div className="relative h-40 overflow-hidden">
+                  <img
+                    src={event.image}
+                    alt={event.title}
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="absolute top-3 left-3">
+                    <span className="text-sm font-medium text-white bg-primary-600 px-3 py-1 rounded-full">
                       {event.category}
                     </span>
-                    <span className="text-sm text-gray-500">
-                      {new Date(event.date).toLocaleDateString("es-CR")}
+                  </div>
+                  <div className="absolute top-3 right-3">
+                    <span className="text-sm text-white bg-black bg-opacity-50 px-3 py-1 rounded-full">
+                      {formatDateShort(event.date)}
                     </span>
                   </div>
+                </div>
+
+                <CardHeader>
                   <CardTitle className="text-xl">{event.title}</CardTitle>
                   <CardDescription>{event.shortDescription}</CardDescription>
                 </CardHeader>

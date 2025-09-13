@@ -7,7 +7,6 @@ import {
   DollarSign,
   Heart,
   Home,
-  Shield,
   Smartphone,
   Target,
   TrendingUp,
@@ -92,12 +91,12 @@ const Donar: React.FC = () => {
   ];
 
   const bankInfo = {
-    bank: "Banco Nacional de Costa Rica",
-    accountName: "Iglesia Asambleas de Dios La Rita",
-    accountNumber: "100-01-000-123456-7",
+    bank: "BAC San José",
+    accountName: CHURCH_INFO.name,
+    accountNumber: "001002015652",
     accountType: "Cuenta Corriente",
-    sinpeNumber: "8888-1234",
-    sinpeName: "Iglesia Asambleas de Dios La Rita",
+    sinpeNumber: CHURCH_INFO.phone,
+    sinpeName: CHURCH_INFO.name,
   };
 
   const copyToClipboard = (text: string, field: string) => {
@@ -134,8 +133,8 @@ const Donar: React.FC = () => {
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary-600 via-primary-700 to-primary-800 text-white">
+      {/* Hero Section - Hidden */}
+      {/* <section className="bg-gradient-to-br from-primary-600 via-primary-700 to-primary-800 text-white">
         <div className="container-custom section-padding">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Donar</h1>
@@ -146,7 +145,7 @@ const Donar: React.FC = () => {
             </p>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Bible Verse */}
       <section className="section-padding bg-gray-50">
@@ -471,87 +470,6 @@ const Donar: React.FC = () => {
                 </CardHeader>
                 <CardContent>
                   <CardDescription>{purpose.description}</CardDescription>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Transparency */}
-      <section className="section-padding">
-        <div className="container-custom">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Transparencia Financiera
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Creemos en la transparencia total. Aquí puedes ver cómo utilizamos
-              los fondos donados.
-            </p>
-          </div>
-
-          <div className="max-w-4xl mx-auto">
-            <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center">
-                  <Shield className="h-6 w-6 mr-2 text-primary-600" />
-                  Distribución de Fondos 2024
-                </CardTitle>
-                <CardDescription>Total recaudado: ₡5,000,000</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-4">
-                  {transparencyData.map((item, index) => (
-                    <div key={index} className="space-y-2">
-                      <div className="flex justify-between items-center">
-                        <span className="font-medium text-gray-900">
-                          {item.category}
-                        </span>
-                        <span className="text-sm text-gray-600">
-                          {item.amount}
-                        </span>
-                      </div>
-                      <div className="w-full bg-gray-200 rounded-full h-3">
-                        <div
-                          className="bg-primary-600 h-3 rounded-full transition-all duration-1000"
-                          style={{ width: `${item.percentage}%` }}
-                        ></div>
-                      </div>
-                      <div className="text-right">
-                        <span className="text-sm text-gray-500">
-                          {item.percentage}%
-                        </span>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* More Bible Verses */}
-      <section className="section-padding bg-gray-50">
-        <div className="container-custom">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Versículos sobre Generosidad
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {bibleVerses.slice(1).map((verse, index) => (
-              <Card key={index} className="text-center">
-                <CardContent className="pt-6">
-                  <Heart className="h-8 w-8 text-primary-600 mx-auto mb-4" />
-                  <blockquote className="text-gray-700 italic mb-4">
-                    "{verse.verse}"
-                  </blockquote>
-                  <cite className="text-primary-600 font-medium">
-                    {verse.reference}
-                  </cite>
                 </CardContent>
               </Card>
             ))}

@@ -12,7 +12,6 @@ import {
   Phone,
   Send,
   Users,
-  Youtube,
 } from "lucide-react";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
@@ -128,8 +127,8 @@ const Contacto: React.FC = () => {
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary-600 via-primary-700 to-primary-800 text-white">
+      {/* Hero Section - Hidden */}
+      {/* <section className="bg-gradient-to-br from-primary-600 via-primary-700 to-primary-800 text-white">
         <div className="container-custom section-padding">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Contáctanos</h1>
@@ -140,7 +139,7 @@ const Contacto: React.FC = () => {
             </p>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Contact Information */}
       <section className="section-padding bg-gray-50">
@@ -264,7 +263,7 @@ const Contacto: React.FC = () => {
                     <Input
                       id="phone"
                       {...register("phone")}
-                      placeholder="+506 2222-3333"
+                      placeholder={CHURCH_INFO.phone}
                       className={errors.phone ? "border-red-500" : ""}
                     />
                     {errors.phone && (
@@ -503,15 +502,6 @@ const Contacto: React.FC = () => {
               title="Síguenos en Instagram"
             >
               <Instagram className="h-8 w-8 group-hover:scale-110 transition-transform" />
-            </a>
-            <a
-              href={CHURCH_INFO.socialMedia.youtube}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center text-white hover:bg-red-700 transition-colors group"
-              title="Síguenos en YouTube"
-            >
-              <Youtube className="h-8 w-8 group-hover:scale-110 transition-transform" />
             </a>
             <a
               href={`https://wa.me/${CHURCH_INFO.socialMedia.whatsapp}`}

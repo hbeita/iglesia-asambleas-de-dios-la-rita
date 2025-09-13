@@ -7,7 +7,6 @@ import {
   MapPin,
   MessageCircle,
   Phone,
-  Youtube,
 } from "lucide-react";
 import React from "react";
 import { Link } from "react-router-dom";
@@ -73,16 +72,6 @@ const Footer: React.FC = () => {
                 title="Síguenos en Instagram"
               >
                 <Instagram className="h-5 w-5 group-hover:scale-110 transition-transform" />
-              </a>
-              <a
-                href={CHURCH_INFO.socialMedia.youtube}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-red-400 transition-colors group"
-                aria-label="YouTube"
-                title="Síguenos en YouTube"
-              >
-                <Youtube className="h-5 w-5 group-hover:scale-110 transition-transform" />
               </a>
               <a
                 href={`https://wa.me/${CHURCH_INFO.socialMedia.whatsapp}`}

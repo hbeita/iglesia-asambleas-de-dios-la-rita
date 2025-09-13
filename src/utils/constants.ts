@@ -2,14 +2,14 @@ export const CHURCH_INFO = {
   name: "Iglesia Asambleas de Dios La Rita",
   tagline: "Transformando vidas, construyendo comunidad",
   address: "La Rita, Costa Rica",
-  phone: "+506 2222-3333",
+  phone: "+506 89059393",
   email: "info@asambleasdelarita.cr",
   website: "https://asambleasdelarita.cr",
   socialMedia: {
     facebook: "https://www.facebook.com/profile.php?id=100067216201877",
     instagram: "https://www.instagram.com/iglesialaritaad/",
     youtube: "https://youtube.com/asambleasdelarita",
-    whatsapp: "+50622223333",
+    whatsapp: "+506 89059393",
   },
   mapsUrl: "https://maps.app.goo.gl/gQJkmnte4Dh5gQJZ6",
   wazeUrl:
