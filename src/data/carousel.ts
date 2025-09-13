@@ -4,7 +4,7 @@ import { eventos } from "./eventos";
 export const carouselSlides: CarouselSlide[] = [
   {
     id: "welcome-banner",
-    image: "/src/assets/pastors.png", // Using the pastors image as a welcome banner
+    image: "/images/pastors.png", // Using the pastors image as a welcome banner
     title: "Bienvenidos a Nuestra Iglesia",
     subtitle: "Iglesia Asambleas de Dios La Rita",
     description:
@@ -15,7 +15,7 @@ export const carouselSlides: CarouselSlide[] = [
   },
   {
     id: "main-message",
-    image: "/src/assets/pastors.png", // Using pastors image as placeholder
+    image: "/images/pastors.png", // Using pastors image as placeholder
     title: "Dios Te Ama",
     subtitle: "Mensaje Principal",
     description:
@@ -44,7 +44,7 @@ export const carouselSlides: CarouselSlide[] = [
 export const bannerSlides: CarouselSlide[] = [
   {
     id: "sunday-service",
-    image: "/src/assets/pastors.png", // Using pastors image as placeholder
+    image: "/images/pastors.png", // Using pastors image as placeholder
     title: "Servicio Dominical",
     subtitle: "Todos los Sábados",
     description:
@@ -55,7 +55,7 @@ export const bannerSlides: CarouselSlide[] = [
   },
   {
     id: "prayer-meeting",
-    image: "/src/assets/pastors.png", // Using pastors image as placeholder
+    image: "/images/pastors.png", // Using pastors image as placeholder
     title: "Ayuno y Oración",
     subtitle: "Todos los Martes",
     description:
@@ -66,7 +66,7 @@ export const bannerSlides: CarouselSlide[] = [
   },
   {
     id: "ministries",
-    image: "/src/assets/pastors.png", // Using pastors image as placeholder
+    image: "/images/pastors.png", // Using pastors image as placeholder
     title: "Nuestros Ministerios",
     subtitle: "Para Todas las Edades",
     description:

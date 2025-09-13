@@ -24,7 +24,7 @@ export const pastoralTeam: TeamMember[] = [
     name: "Jhon Anthony Badilla & Hillary Ortega",
     position: "Nuestros Pastores",
     bio: "Somos una pareja joven apasionada por Jesús y con un gran amor por las almas. Dios nos ha confiado la hermosa misión de servir y pastorear esta iglesia, guiados siempre por una visión de reino.\n\nNuestro deseo es que en este lugar encuentres fe, esperanza y una familia espiritual que te acerque cada día más a Cristo. ¡Nos alegra mucho recibirte y caminar juntos en este propósito!",
-    image: "/src/assets/pastors.png",
+    image: "/images/pastors.png",
     email: CHURCH_INFO.email,
     phone: CHURCH_INFO.phone,
     socialMedia: {

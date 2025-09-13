@@ -4,7 +4,7 @@ import { eventos } from "./eventos";
 export const carouselSlides = [
   {
     id: "welcome-banner",
-    image: "/src/assets/svg/welcome-banner.svg",
+    image: "/svg/welcome-banner.svg",
     title: "Bienvenidos a Nuestra Iglesia",
     subtitle: "Iglesia Asambleas de Dios La Rita",
     description:
@@ -15,7 +15,7 @@ export const carouselSlides = [
   },
   {
     id: "main-message",
-    image: "/src/assets/svg/bible-message.svg",
+    image: "/svg/bible-message.svg",
     title: "Dios Te Ama",
     subtitle: "Mensaje Principal",
     description:
@@ -44,7 +44,7 @@ export const carouselSlides = [
 export const bannerSlides = [
   {
     id: "sunday-service",
-    image: "/src/assets/svg/church-service.svg",
+    image: "/svg/church-service.svg",
     title: "Servicio Dominical",
     subtitle: "Todos los Sábados",
     description:
@@ -55,7 +55,7 @@ export const bannerSlides = [
   },
   {
     id: "prayer-meeting",
-    image: "/src/assets/svg/prayer-meeting.svg",
+    image: "/svg/prayer-meeting.svg",
     title: "Ayuno y Oración",
     subtitle: "Todos los Martes",
     description:
@@ -66,7 +66,7 @@ export const bannerSlides = [
   },
   {
     id: "ministries",
-    image: "/src/assets/svg/ministries.svg",
+    image: "/svg/ministries.svg",
     title: "Nuestros Ministerios",
     subtitle: "Para Todas las Edades",
     description:

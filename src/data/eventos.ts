@@ -39,7 +39,7 @@ export const eventos: Evento[] = [
     endTime: "9:00 PM",
     location: "Iglesia La Rita Asambleas de Dios - La Rita Guapiles",
     category: "servicio",
-    image: "/src/assets/events/sabado13setiembre.png",
+    image: "/images/sabado13setiembre.png",
     registrationRequired: false,
     maxAttendees: 300,
     currentAttendees: 0,
