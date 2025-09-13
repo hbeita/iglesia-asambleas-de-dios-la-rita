@@ -1,4 +1,4 @@
-import { CarouselSlide } from "../components/ui/carousel";
+import type { CarouselSlide } from "../components/ui/carousel";
 import { eventos } from "./eventos";
 
 export const carouselSlides: CarouselSlide[] = [

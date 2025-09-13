@@ -123,14 +123,6 @@ const Donar: React.FC = () => {
     },
   ];
 
-  const transparencyData = [
-    { category: "Ministerios", percentage: 40, amount: "₡2,000,000" },
-    { category: "Operaciones", percentage: 25, amount: "₡1,250,000" },
-    { category: "Misiones", percentage: 20, amount: "₡1,000,000" },
-    { category: "Construcción", percentage: 10, amount: "₡500,000" },
-    { category: "Ayuda Social", percentage: 5, amount: "₡250,000" },
-  ];
-
   return (
     <div className="min-h-screen">
       {/* Hero Section - Hidden */}
