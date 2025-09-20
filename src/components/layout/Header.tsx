@@ -2,7 +2,6 @@ import { Mail, MapPin, Menu, Phone, X } from "lucide-react";
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { CHURCH_INFO } from "../../utils/constants";
-import { Button } from "../ui/button";
 import Logo from "../ui/Logo";
 
 const Header: React.FC = () => {
@@ -24,7 +23,7 @@ const Header: React.FC = () => {
   return (
     <header className="bg-primary-800 shadow-lg sticky top-0 z-50">
       {/* Top bar with contact info */}
-      <div className="bg-primary-700 text-white py-2">
+      <div className="bg-primary-700 text-white py-2 hidden">
         <div className="container-custom">
           <div className="flex flex-col sm:flex-row justify-between items-center text-sm">
             <div className="flex items-center space-x-4 mb-2 sm:mb-0">
@@ -90,16 +89,6 @@ const Header: React.FC = () => {
             ))}
           </nav>
 
-          {/* CTA Buttons */}
-          <div className="hidden lg:flex items-center space-x-4">
-            <Button size="sm" asChild>
-              <Link to="/contacto">Visítanos</Link>
-            </Button>
-            <Button size="sm" asChild>
-              <Link to="/donar">Donar</Link>
-            </Button>
-          </div>
-
           {/* Mobile menu button */}
           <button
             className="lg:hidden p-2"
@@ -132,18 +121,6 @@ const Header: React.FC = () => {
                   {item.name}
                 </Link>
               ))}
-              <div className="flex flex-col space-y-2 pt-4 border-t border-primary-600">
-                <Button variant="outline" size="sm" asChild>
-                  <Link to="/contacto" onClick={() => setIsMenuOpen(false)}>
-                    Visítanos
-                  </Link>
-                </Button>
-                <Button size="sm" asChild>
-                  <Link to="/donar" onClick={() => setIsMenuOpen(false)}>
-                    Donar
-                  </Link>
-                </Button>
-              </div>
             </nav>
           </div>
         )}
