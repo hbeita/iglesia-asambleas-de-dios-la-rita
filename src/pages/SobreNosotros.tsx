@@ -4,7 +4,6 @@ import {
   CheckCircle,
   Eye,
   GraduationCap,
-  Heart,
   Mail,
   Phone,
   Target,
@@ -149,11 +148,21 @@ const SobreNosotros: React.FC = () => {
         </div>
       </section>
 
-      {/* Mission, Vision, Values */}
+      {/* Mission, Vision, MM33 */}
       <section className="section-padding">
         <div className="container-custom">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Nuestro Fundamento
+            </h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Los principios fundamentales que guían nuestra iglesia y definen
+              nuestro propósito en el cumplimiento de la gran comisión.
+            </p>
+          </div>
+
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
-            <Card className="text-center">
+            <Card className="text-center hover:shadow-lg transition-shadow">
               <CardHeader>
                 <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Target className="h-8 w-8 text-primary-600" />
@@ -167,7 +176,7 @@ const SobreNosotros: React.FC = () => {
               </CardContent>
             </Card>
 
-            <Card className="text-center">
+            <Card className="text-center hover:shadow-lg transition-shadow">
               <CardHeader>
                 <div className="w-16 h-16 bg-secondary-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Eye className="h-8 w-8 text-secondary-600" />
@@ -181,19 +190,22 @@ const SobreNosotros: React.FC = () => {
               </CardContent>
             </Card>
 
-            <Card className="text-center">
+            <Card className="text-center hover:shadow-lg transition-shadow">
               <CardHeader>
-                <div className="w-16 h-16 bg-accent-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Heart className="h-8 w-8 text-accent-600" />
+                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <img
+                    src="/images/mm33.png"
+                    alt="MM33 Logo"
+                    className="h-10 w-10 object-contain"
+                  />
                 </div>
-                <CardTitle className="text-2xl">Nuestros Valores</CardTitle>
+                <CardTitle className="text-2xl">
+                  {missionVisionValues.mm33.title}
+                </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600 leading-relaxed">
-                  Nuestros valores fundamentales se basan en el amor como centro
-                  del cristianismo, la fe como motor de la vida cristiana, la
-                  humildad en el servicio desinteresado, y la unidad como
-                  reflejo del corazón de Cristo.
+                  {missionVisionValues.mm33.description}
                 </p>
               </CardContent>
             </Card>
@@ -239,6 +251,17 @@ const SobreNosotros: React.FC = () => {
               <a href="/contacto">
                 <Users className="mr-2 h-5 w-5" />
                 Visítanos
+              </a>
+            </Button>
+            <Button
+              size="lg"
+              variant="outline"
+              className="border-white text-white hover:bg-white hover:text-primary-600"
+              asChild
+            >
+              <a href="/nuestro-modelo">
+                <Target className="mr-2 h-5 w-5" />
+                Nuestro Modelo
               </a>
             </Button>
             <Button

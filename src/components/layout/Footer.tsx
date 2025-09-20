@@ -40,12 +40,21 @@ const Footer: React.FC = () => {
         <div className="py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Church Info */}
           <div className="space-y-4">
-            <div className="flex items-center space-x-3">
-              <Logo className="h-10 w-auto" />
-              {/* <div>
-                <h3 className="font-bold text-lg">{CHURCH_INFO.name}</h3>
-                <p className="text-sm text-gray-400">{CHURCH_INFO.tagline}</p>
-              </div> */}
+            <div className="space-y-3">
+              <div className="flex items-center space-x-3">
+                <Logo className="h-10 w-auto" />
+                {/* <div>
+                  <h3 className="font-bold text-lg">{CHURCH_INFO.name}</h3>
+                  <p className="text-sm text-gray-400">{CHURCH_INFO.tagline}</p>
+                </div> */}
+              </div>
+              <div className="flex items-center space-x-2">
+                <img
+                  src="/images/mm33.png"
+                  alt="MM33 Logo"
+                  className="h-12 w-18 object-contain"
+                />
+              </div>
             </div>
             <p className="text-gray-300 text-sm">
               Una comunidad de fe comprometida con transformar vidas y construir
@@ -184,7 +193,7 @@ const Footer: React.FC = () => {
             <div className="flex items-center space-x-1 text-gray-400 text-sm">
               <span>Hecho con</span>
               <Heart className="h-4 w-4 text-red-500" />
-              <span>para la gloria de Dios</span>
+              <span>por Hector Garcia Beita.</span>
             </div>
           </div>
         </div>

@@ -113,9 +113,16 @@ export const churchHistory = {
 
 export const missionVisionValues = {
   mission:
-    "Ser una organización dedicada a formar discípulos de Cristo en la Rita y el mundo.\nMateo 28:18",
+    "Ser y hacer discípulos llenos del Espíritu Santo, que evangelizan, hacen misiones y plantan iglesias cumpliendo la gran comisión",
   vision:
-    "Ser la organización que trabaja para que en la Rita y todo el mundo todos sean salvos.\n1 Timoteo 3-4",
+    "Ser la iglesia que trabaja para que en La Rita y el mundo todos sean salvos",
+  mm33: {
+    title: "Iniciativa MM33",
+    description:
+      "MM33 es la iniciativa global de Asambleas de Dios de celebrar el 2000 aniversario de Cristo con 100 millones de creyentes y 1 millón de iglesias en el mundo",
+    details:
+      "MM33 simboliza los 2000 años desde Cristo (MM = 2000 en números romanos + 33 = 2033). Significa 'Su Mandato, nuestra Misión'. La iglesia de La Rita tiene su cuota en esta iniciativa global de crecimiento y multiplicación.",
+  },
   values: [
     {
       title: "Amor",

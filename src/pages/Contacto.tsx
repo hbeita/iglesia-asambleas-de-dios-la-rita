@@ -5,7 +5,6 @@ import {
   Clock,
   Facebook,
   Instagram,
-  Mail,
   MapPin,
   MessageCircle,
   Navigation,
@@ -86,13 +85,6 @@ const Contacto: React.FC = () => {
       content: CHURCH_INFO.phone,
       action: "Llamar",
       href: `tel:${CHURCH_INFO.phone}`,
-    },
-    {
-      icon: <Mail className="h-8 w-8" />,
-      title: "Email",
-      content: CHURCH_INFO.email,
-      action: "Enviar Email",
-      href: `mailto:${CHURCH_INFO.email}`,
     },
     {
       icon: <MessageCircle className="h-8 w-8" />,
@@ -184,7 +176,7 @@ const Contacto: React.FC = () => {
       </section>
 
       {/* Contact Form and Map */}
-      <section className="section-padding">
+      <section className="section-padding hidden">
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}

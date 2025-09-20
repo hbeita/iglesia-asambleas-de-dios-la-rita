@@ -5,6 +5,7 @@ import Donar from "./pages/Donar";
 import Eventos from "./pages/Eventos";
 import Home from "./pages/Home";
 import Ministerios from "./pages/Ministerios";
+import NuestroModelo from "./pages/NuestroModelo";
 import SobreNosotros from "./pages/SobreNosotros";
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/ministerios" element={<Ministerios />} />
+          <Route path="/nuestro-modelo" element={<NuestroModelo />} />
           <Route path="/sobre-nosotros" element={<SobreNosotros />} />
           <Route path="/eventos" element={<Eventos />} />
           <Route path="/donar" element={<Donar />} />

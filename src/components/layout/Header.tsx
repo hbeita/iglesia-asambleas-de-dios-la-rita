@@ -12,6 +12,7 @@ const Header: React.FC = () => {
   const navigation = [
     { name: "Inicio", href: "/" },
     { name: "Ministerios", href: "/ministerios" },
+    { name: "Nuestro Modelo", href: "/nuestro-modelo" },
     { name: "Sobre Nosotros", href: "/sobre-nosotros" },
     { name: "Eventos", href: "/eventos" },
     { name: "Donar", href: "/donar" },
@@ -91,7 +92,7 @@ const Header: React.FC = () => {
 
           {/* CTA Buttons */}
           <div className="hidden lg:flex items-center space-x-4">
-            <Button variant="outline" size="sm" asChild>
+            <Button size="sm" asChild>
               <Link to="/contacto">Visítanos</Link>
             </Button>
             <Button size="sm" asChild>
@@ -106,16 +107,16 @@ const Header: React.FC = () => {
             aria-label="Toggle menu"
           >
             {isMenuOpen ? (
-              <X className="h-6 w-6 text-gray-700" />
+              <X className="h-6 w-6 text-white" />
             ) : (
-              <Menu className="h-6 w-6 text-gray-700" />
+              <Menu className="h-6 w-6 text-white" />
             )}
           </button>
         </div>
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="lg:hidden border-t border-gray-200 py-4">
+          <div className="lg:hidden border-t border-primary-600 py-4">
             <nav className="flex flex-col space-y-4">
               {navigation.map((item) => (
                 <Link
@@ -123,15 +124,15 @@ const Header: React.FC = () => {
                   to={item.href}
                   className={`font-medium transition-colors duration-200 ${
                     isActive(item.href)
-                      ? "text-primary-600"
-                      : "text-gray-700 hover:text-primary-600"
+                      ? "text-white border-b-2 border-primary-600"
+                      : "text-white hover:text-green-500"
                   }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
                 </Link>
               ))}
-              <div className="flex flex-col space-y-2 pt-4 border-t border-gray-200">
+              <div className="flex flex-col space-y-2 pt-4 border-t border-primary-600">
                 <Button variant="outline" size="sm" asChild>
                   <Link to="/contacto" onClick={() => setIsMenuOpen(false)}>
                     Visítanos
